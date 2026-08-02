@@ -292,14 +292,6 @@
 #define SLIDE_PSELECT_NFDS 320
 #define SLIDE_USE_SELECT 1
 
-/* The app cannot use the tracefs slide source from its restricted domain, so
- * its boot_id fallback must take the fully shaped fake-task route. Leaving
- * the walk on INIT_TASK works for the shell/tracefs path but can follow live
- * PI state and panic before boot_id is rewritten. */
-#define SLIDE_USE_FAKE_TASK 1
-#define SLIDE_LOCK_OWNER_VALUE 1ULL
-#define SLIDE_RB_PARENT_TYPE_RESTORE 1ULL
-
 /* Bootloader-seeded KASLR: the slide is gigabytes, 2 MiB aligned, and moves
  * only the virtual mapping.  Measured on this device: the boot-id leak sees a
  * multi-GB, 0x200000-aligned slide (e.g. 0x18b8400000) on every boot, and the
