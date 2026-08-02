@@ -5,7 +5,7 @@ This repository keeps the original Apache License 2.0 — see [LICENSE](LICENSE)
 Everything here that came from somewhere else is named in [Credits](#credits).
 
 This repository contains the device-specific native side of
-[Root My Device](https://github.com/Witaqua-tools/Root-My-Device):
+[Root My Device](https://github.com/ariidesu/Root-My-Device):
 
 - exact firmware profiles and offsets;
 - the exploit payload sources;
