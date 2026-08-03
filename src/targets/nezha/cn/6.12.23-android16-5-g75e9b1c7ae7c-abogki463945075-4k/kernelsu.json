@@ -1,0 +1,13 @@
+{
+  "$comment": [
+    "KernelSU late-load build for the exact nezha kernel release.",
+    "The module is rebuilt by CI; no binary is committed here."
+  ],
+  "id": "nezha",
+  "kmi": "android16-6.12",
+  "ddkImage": "ghcr.io/ylarod/ddk-min:android16-6.12-20260313",
+  "kernelRelease": "6.12.23-android16-5-g75e9b1c7ae7c-abogki463945075-4k",
+  "patchSets": [],
+  "config": [],
+  "managerPackage": "me.weishu.kernelsu"
+}

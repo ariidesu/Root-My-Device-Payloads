@@ -106,6 +106,26 @@
       "abi": "arm64-v8a",
       "pageSize": 4096,
       "status": "the LD_PRELOAD build roots this device end to end: the core61 FOOT pselect overlay was completed and one shot reached done=1 root=1 with the su daemon serving uid=0 from u:r:kernel:s0, and the app payload (APP_PAYLOAD=1) builds and is on-device. Every matched field here is read off the device rather than reasoned from the image. The KernelSU late-load for this target is pending the ksud built in CI's kernactions job"
+    },
+    {
+      "profileId": "nezha-cn-OS3.0.10.0.WPACNXM",
+      "payload": "CVE-2026-43499",
+      "core": "core612",
+      "device": "nezha",
+      "region": "CN",
+      "manufacturer": "Xiaomi",
+      "model": "Xiaomi 17 Ultra",
+      "marketingName": "Xiaomi 17 Ultra",
+      "soc": "Qualcomm SM8850",
+      "kernelRelease": "6.12.23-android16-5-g75e9b1c7ae7c-abogki463945075-4k",
+      "kernelVersion": "Linux version 6.12.23-android16-5-g75e9b1c7ae7c-abogki463945075-4k (kleaf@build-host) (Android (14043575, +pgo, +lto, +mlgo, based on r536225) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project b3a530ec6537146650e42be89f1089e9a3588460), LLD 19.0.1) #1 SMP PREEMPT Thu Nov 27 08:45:40 UTC 2025",
+      "kernelBuildVersion": "#1 SMP PREEMPT Thu Nov 27 08:45:40 UTC 2025",
+      "buildDisplay": "BP2A.250605.031.A3",
+      "buildFingerprint": "Xiaomi/nezha/nezha:16/BP2A.250605.031.A3/OS3.0.10.0.WPACNXM:user/release-keys",
+      "sdk": 36,
+      "abi": "arm64-v8a",
+      "pageSize": 4096,
+      "status": "the exact nezha stock boot image confirms the android16-6.12 CVE shape and the target offsets, including the pselect stack shift; the standalone and application routes have not yet been run on this device"
     }
   ]
 }
