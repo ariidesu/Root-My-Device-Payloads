@@ -110,6 +110,18 @@ runs:
           apply_set "$set"
         done
 
+        # A few KMI branches expose a kernel type under a different name than
+        # the vendor patch expects. Keep these narrow source-compatibility
+        # deltas in this repository and key them by build id, so the external
+        # vendor patch set remains unchanged and unrelated modules are not
+        # touched.
+        local_patch="tools/kernelsu-patches/${{ inputs.id }}.patch"
+        if [ -f "$local_patch" ]; then
+          echo "applying $local_patch"
+          git -C src/kernelsu/KernelSU apply --check "$GITHUB_WORKSPACE/$local_patch"
+          git -C src/kernelsu/KernelSU apply "$GITHUB_WORKSPACE/$local_patch"
+        fi
+
     - name: Install NDK ${{ inputs.ndk-version }}
       shell: bash
       run: |
