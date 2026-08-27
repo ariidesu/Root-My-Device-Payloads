@@ -126,6 +126,26 @@
       "abi": "arm64-v8a",
       "pageSize": 4096,
       "status": "the exact nezha stock boot image confirms the android16-6.12 CVE shape and the target offsets, including the pselect stack shift; the standalone and application routes have not yet been run on this device"
+    },
+    {
+      "profileId": "q5q-xx-F946BXXS7GZG1",
+      "payload": "CVE-2026-43499",
+      "core": "core61",
+      "device": "q5q",
+      "region": "XX",
+      "manufacturer": "Samsung",
+      "model": "SM-F946B",
+      "marketingName": "Samsung Galaxy Z Fold 5",
+      "soc": "Qualcomm SM8550",
+      "kernelRelease": "5.15.189-android13-8-33404244-abF946BXXS7GZG1",
+      "kernelVersion": "Linux version 5.15.189-android13-8-33404244-abF946BXXS7GZG1 (build-user@build-host) (Android (8508608, based on r450784e) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6), LLD 14.0.7) #1 SMP PREEMPT Tue Jul 7 01:31:12 UTC 2026",
+      "kernelBuildVersion": "#1 SMP PREEMPT Tue Jul 7 01:31:12 UTC 2026",
+      "buildDisplay": "BP4A.251205.006.F946BXXS7GZG1",
+      "buildFingerprint": "samsung/q5qxxx/q5q:16/BP4A.251205.006/F946BXXS7GZG1:user/release-keys",
+      "sdk": 36,
+      "abi": "arm64-v8a",
+      "pageSize": 4096,
+      "status": "offsets and the P0 fingerprint were derived from the supplied F946BXXS7GZG1 boot image; the Android 16 system build fields come from the matching FOTA properties. The existing core61 route is used as a provisional 5.15 compatibility build; no exploit or KernelSU execution has been hardware-verified on SM-F946B."
     }
   ]
 }
